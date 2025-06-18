@@ -1,12 +1,56 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Shopping Cart application built with React and Vite. It demonstrates how to manage products, add items to a cart, update quantities, and handle checkout logic in a modern web application.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse a list of products
+- Add and remove items from the cart
+- Update item quantities in the cart
+- View cart summary with total price
+- Responsive and user-friendly interface
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/shopping-cart.git
+    cd shopping-cart
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/) for code quality
+
+## Project Structure
+
+```
+src/
+  components/    # Reusable UI components
+  pages/         # Application pages
+  context/       # Cart state management
+  App.jsx        # Main app component
+  main.jsx       # Entry point
+```
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
+
+## License
+
+This project is licensed under the MIT License.
