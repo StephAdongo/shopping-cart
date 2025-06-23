@@ -1,6 +1,6 @@
 # Shopping Cart
 
-This project is a simple Shopping Cart application built with React and Vite. It demonstrates how to manage products, add items to a cart, update quantities, and handle checkout logic in a modern web application.
+This project is a simple Shopping Cart application built with React and Vite. It demonstrates how to manage products, add items to a cart, update quantities and handle checkout logic in a modern web application.
 
 ## Features
 
