@@ -15,7 +15,7 @@ This project is a simple Shopping Cart application built with React and Vite. It
 
 1. **Clone the repository:**
     ```bash
-<<<<<<< HEAD
+
     git clone https://github.com/StephAdngo/shopping-cart.git
     cd shopping-cart
 =======
