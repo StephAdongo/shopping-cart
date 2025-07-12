@@ -9,12 +9,14 @@ This project is a simple Shopping Cart application built with React and Vite. It
 - Update item quantities in the cart
 - View cart summary with total price
 - Responsive and user-friendly interface
+  
+  
 
 ## Getting Started
 
 1. **Clone the repository:**
     ```bash
-<<<<<<< HEAD
+
     git clone https://github.com/StephAdngo/shopping-cart.git
     cd shopping-cart
 =======
