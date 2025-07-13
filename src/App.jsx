@@ -1,33 +1,63 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Routes,Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage'
+import ShopPage from './Pages/ShopPage'
+import Cart from './components/Cart'
+import Navbar from './components/Navbar'
 function App() {
-  const [count, setCount] = useState(0)
 
+ const[cartItem,setCartItem]=useState([])
+    const addToCartfn=(product,quantity)=>{
+
+      setCartItem(
+        (prev)=>{
+           const item=cartItem.find((item)=>item.id===product.id);
+           if(item){
+            return cartItem.map((curritem)=>
+              curritem.id===item.id? ( {...curritem,quantity:curritem.quantity+quantity}):( curritem)
+      )}
+           
+           else{
+           
+             const newproduct={...product,quantity:quantity}
+              console.log("New product",newproduct)
+            return [...prev,newproduct]
+           }
+        }
+      )
+     
+  
+   
+  }
+  const removeFromCart=(id)=>{
+    setCartItem((prev)=>prev.filter((item)=>item.id!=id))
+  }
+   
+  const clearCart=()=>{
+    setCartItem([])
+  }
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Navbar totalItems={cartItem.reduce((sum,item)=>sum+item.quantity,0)}/>
+ 
+
+   
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/shop' element={<ShopPage handleCart={addToCartfn}/>} />
+      <Route path='/cart' element={<Cart
+       cartItem={cartItem} 
+       updateCart={addToCartfn}
+       removeFromCart={removeFromCart}
+       clearCart={clearCart}
+       />}/>
+    </Routes>
+    
+  
+   
     </>
   )
 }
