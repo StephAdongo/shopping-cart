@@ -4,8 +4,25 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router'
 
+
+//  const route=createBrowserRouter([
+//       {
+// path:'/',
+// element:<HomePage/>,
+
+ 
+
+//       },
+//        {
+//     path:'shop',
+//     element:<ShopPage/>
+//   }
+//      ])
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
+      
     <App />
+   
   </BrowserRouter>,
 )
