@@ -7,8 +7,11 @@ This project is a simple Shopping Cart application built with React and Vite. It
 - Browse a list of products
 - Add and remove items from the cart
 - Update item quantities in the cart
-- View cart summary with total price
-- Responsive and user-friendly interface
+- View cart summary with total price and item count
+- Responsive, mobile-friendly interface
+- Fast performance with Vite
+- Simple, intuitive user experience
+- Easily extensible codebase
   
   
 
@@ -17,12 +20,10 @@ This project is a simple Shopping Cart application built with React and Vite. It
 1. **Clone the repository:**
     ```bash
 
-    git clone https://github.com/StephAdngo/shopping-cart.git
+    git clone https://github.com/StephAdongo/shopping-cart.git
+    
     cd shopping-cart
-=======
-    git clone https://github.com/your-username/shopping-cart.git
-    cd shopping-cart 
->>>>>>> ddc7fc11cdfe3a08d647c70bdb694cb6c95af5f4
+
     ```
 
 2. **Install dependencies:**
